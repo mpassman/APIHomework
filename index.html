@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+<!--Create Start Button-->
+<p id="startQuiz">Click the Start button when ready</p>
+<div id = "button">
+<button onClick="quizTimer = setInterval(myCounter, 1000)">Start</button>
+<br>
+<text>Time: <text id="time001">30</text></text>
+<span id="span"></span>
+</div>
+<br>
+<br>
+<div id="boxOne" class = "starthidden">
+    <h4>"Which one of these is not an animal?"</h4>
+    <button id ="QA" class="quizBtn">cat</button>
+    <button id ="QB" class="quizBtn">dog</button>
+    <button id ="QC" class="quizBtn">bird</button>
+    <button id="QD" class="quizBtn">tree</button>
+    </div>
+
+
+
+</div>
+
+
+    <script>
+    
+    function begin001() {
+        c = 30;
+        
+    }
+    
+
+      
+    function timer001() {
+        c = c - 1;
+        if (c<30) 
+            time001.innerHTML = c;
+        }
+
+        if (c < 0) {
+            window.clearInterval(update);
+        }
+    
+        
+        update - setInterval("timer001()", 1000);
+
+        var questions = [
+    	{
+    		title: "Which of these is not an animal?",
+    		choices: ["cat", "dog", "bird", "tree"],
+    		answer: "tree"
+    	},
+    	{
+    		title: "Which of these is a State?",
+    		choices: ["Guam", "Kansas", "American Samoa", "Puerto Rico"],
+    		answer: "Kansas"
+    	}
+    ]
+    
+    
+    
+
+
+</script>
+
+
+</body>
+</html>
